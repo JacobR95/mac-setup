@@ -1,3 +1,4 @@
 #!/bin/bash
-./dotfiles/init.sh
+./dotfiles/dotfiles.sh
+./homebrew/homebrew.sh
 

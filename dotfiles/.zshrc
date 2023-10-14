@@ -16,6 +16,8 @@ alias statement="echo '![](https://img.shields.io/badge/statement-green)' | pbco
 
 alias reload="source ~/.zshrc"
 
+alias brew-dump='brew bundle dump ~/setup/homebrew'
+
 #
 # aPriori aliases.
 #
