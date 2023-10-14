@@ -7,4 +7,4 @@
 # This uses the "Brewfile" to install all applications listed in there.
 # In order to generate or update the brewfile, run:
 # brew bundle dump
-brew bundle
+brew bundle --file=~/setup/homebrew/Brewfile
