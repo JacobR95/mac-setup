@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install homebrew apps.
 # This uses the "Brewfile" to install all applications listed in there.
