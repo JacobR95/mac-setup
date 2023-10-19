@@ -9,56 +9,58 @@ export ZSH="$HOME/.oh-my-zsh"
 alias vi="lvim"
 alias lg="lazygit"
 
+alias dc='docker compose'
+
 alias major="echo '![](https://img.shields.io/badge/major-red)' | pbcopy"
 alias minor="echo '![](https://img.shields.io/badge/minor-yellow)' | pbcopy"
 alias question="echo '![](https://img.shields.io/badge/question-blue)' | pbcopy"
 alias statement="echo '![](https://img.shields.io/badge/statement-green)' | pbcopy"
 
-alias reload="source ~/.zshrc"
+alias reload='source ~/.zshrc'
 
 alias brew-dump='brew bundle dump ~/setup/homebrew'
 
 #
 # aPriori aliases.
 #
-alias ats-api='cd /c/projects/apriori-ats-api && pwd'
-alias ats-app='cd /c/projects/apriori-ats-app && pwd'
-alias bcs-api='cd /c/projects/apriori-bcs-api && pwd'
-alias cas-app='cd /c/projects/apriori-cas-app && pwd'
-alias cds-api='cd /c/projects/apriori-cds-api && pwd'
-alias cic-agt='cd /c/projects/apriori-cic-agt && pwd'
-alias cic-app='cd /c/projects/apriori-cic-app && pwd'
-alias cid-api='cd /c/projects/apriori-cid-api && pwd'
-alias cid-app='cd /c/projects/apriori-cid-app && pwd'
-alias cis-api='cd /c/projects/apriori-cis-api && pwd'
-alias cis-app='cd /c/projects/apriori-cis-app && pwd'
-alias cso-api='cd /c/projects/apriori-cso-api && pwd'
-alias cso-app='cd /c/projects/apriori-cso-app && pwd'
-alias css-api='cd /c/projects/apriori-css-api && pwd'
-alias sds-api='cd /c/projects/apriori-sds-api && pwd'
-alias vds-api='cd /c/projects/apriori-vds-api && pwd'
-alias dev-stacks='cd /c/projects/apriori-dev-stacks && pwd'
-alias edc-api='cd /c/projects/apriori-edc-api && pwd'
-alias edc-app='cd /c/projects/apriori-edc-app && pwd'
-alias etl-svc='cd /c/projects/apriori-etl-svc && pwd'
-alias cpl-svc='cd /c/projects/apriori-cpl-svc && pwd'
-alias fms-api='cd /c/projects/apriori-fms-api && pwd'
-alias nts-api='cd /c/projects/apriori-nts-api && pwd'
-alias qds-api='cd /c/projects/apriori-qds-api && pwd'
-alias common='cd /c/projects/apriori-common && pwd'
+alias ats-api='cd ~/projects/apriori-ats-api && pwd'
+alias ats-app='cd ~/projects/apriori-ats-app && pwd'
+alias bcs-api='cd ~/projects/apriori-bcs-api && pwd'
+alias cas-app='cd ~/projects/apriori-cas-app && pwd'
+alias cds-api='cd ~/projects/apriori-cds-api && pwd'
+alias cic-agt='cd ~/projects/apriori-cic-agt && pwd'
+alias cic-app='cd ~/projects/apriori-cic-app && pwd'
+alias cid-api='cd ~/projects/apriori-cid-api && pwd'
+alias cid-app='cd ~/projects/apriori-cid-app && pwd'
+alias cis-api='cd ~/projects/apriori-cis-api && pwd'
+alias cis-app='cd ~/projects/apriori-cis-app && pwd'
+alias cso-api='cd ~/projects/apriori-cso-api && pwd'
+alias cso-app='cd ~/projects/apriori-cso-app && pwd'
+alias css-api='cd ~/projects/apriori-css-api && pwd'
+alias sds-api='cd ~/projects/apriori-sds-api && pwd'
+alias vds-api='cd ~/projects/apriori-vds-api && pwd'
+alias dev-stacks='cd ~/projects/apriori-dev-stacks/compose && pwd'
+alias edc-api='cd ~/projects/apriori-edc-api && pwd'
+alias edc-app='cd ~/projects/apriori-edc-app && pwd'
+alias etl-svc='cd ~/projects/apriori-etl-svc && pwd'
+alias cpl-svc='cd ~/projects/apriori-cpl-svc && pwd'
+alias fms-api='cd ~/projects/apriori-fms-api && pwd'
+alias nts-api='cd ~/projects/apriori-nts-api && pwd'
+alias qds-api='cd ~/projects/apriori-qds-api && pwd'
+alias common='cd ~/projects/apriori-common && pwd'
 
 # Docker
-alias dc-ps='docker-compose ps'
-alias dc-ach='docker-compose --profile apriori-cloud-home'
-alias dc-core='docker-compose --profile core-services'
-alias dc-cid='docker-compose --profile cost-insight-design'
-alias dc-cig='docker-compose --profile cost-insight-generate'
-alias dc-cis='docker-compose --profile cost-insight-source'
-alias dc-cas='docker-compose --profile customer-admin-service'
-alias dc-edc='docker-compose --profile electronics-data-collection'
-alias dc-persist='docker-compose --profile persistance'
-alias dc-provision='docker-compose --profile provisioning up --build'
-alias dc-up='docker-compose docker-compose --profile persistance up -d && docker-compose --profile core-services up -d && docker-compose --profile cost-insight-design up -d cid-api && docker-compose --profile cost-insight-source up -d cis-api'
+alias dc-ps='docker compose ps'
+alias dc-ach='docker compose --profile apriori-cloud-home'
+alias dc-core='docker compose --profile core-services'
+alias dc-cid='docker compose --profile cost-insight-design'
+alias dc-cig='docker compose --profile cost-insight-generate'
+alias dc-cis='docker compose --profile cost-insight-source'
+alias dc-cas='docker compose --profile customer-admin-service'
+alias dc-edc='docker compose --profile electronics-data-collection'
+alias dc-persist='docker compose --profile persistance'
+alias dc-provision='docker compose --profile provisioning up --build'
+alias dc-up='docker compose docker compose --profile persistance up -d && docker compose --profile core-services up -d && docker compose --profile cost-insight-design up -d cid-api && docker compose --profile cost-insight-source up -d cis-api'
 alias rmi-ach-api='docker rmi -f docker.apriori.com/apriori-ach-api:1.1.0-snapshot'
 alias rmi-ach-app='docker rmi -f docker.apriori.com/apriori-ach-app:1.1.0-snapshot'
 alias rmi-ats-api='docker rmi -f docker.apriori.com/apriori-ats-api:2.0.0-snapshot'
@@ -75,7 +77,7 @@ alias rmi-vds-api='docker rmi -f docker.apriori.com/apriori-vds-api:1.0.0-snapsh
 alias rmi-mongo='docker rmi -f mongo:4.2.0'
 alias rmi-mysql='docker rmi -f mysql:5.7'
 alias rmi-postgres='docker rmi -f postgres:12.4'
-alias rmi-redis='docker rmi -f redis:alpine'lias react-common='cd /c/projects/apriori-react-common && pwd'
+alias rmi-redis='docker rmi -f redis:alpine'lias react-common='cd ~/projects/apriori-react-common && pwd'
 
 #
 # Oh My Zsh
