@@ -6,7 +6,7 @@ export PATH=$PATH:/Users/jacobrobinson/.cargo/bin
 
 export ZSH="$HOME/.oh-my-zsh"
 
-alias vi="lvim"
+alias vi="nvim"
 alias lg="lazygit"
 
 alias dc='docker compose'
@@ -18,7 +18,7 @@ alias statement="echo '![](https://img.shields.io/badge/statement-green)' | pbco
 
 alias reload='source ~/.zshrc'
 
-alias brew-dump='brew bundle dump ~/setup/homebrew'
+alias brew-dump='rm -rf ~/setup/homebrew/Brewfile && brew bundle dump --file=~/setup/homebrew/Brewfile'
 
 #
 # aPriori aliases.
@@ -48,6 +48,10 @@ alias fms-api='cd ~/projects/apriori-fms-api && pwd'
 alias nts-api='cd ~/projects/apriori-nts-api && pwd'
 alias qds-api='cd ~/projects/apriori-qds-api && pwd'
 alias common='cd ~/projects/apriori-common && pwd'
+alias rc='cd ~/projects/apriori-react-common && pwd'
+alias setup='cd ~/setup && pwd'
+alias nvim-config='cd ~/setup/nvim && pwd'
+alias homebrew-config='cd ~/setup/homebrew && pwd'
 
 # Docker
 alias dc-ps='docker compose ps'
