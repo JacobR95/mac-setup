@@ -12,6 +12,7 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>la", function() vim.lsp.buf.code_action() end, opts)
   vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "<leader>lr", function() vim.lsp.buf.rename() end, opts)
+  vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
