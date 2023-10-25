@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
     run = 'cd app && npm install',
   })
 
+  use 'BurntSushi/ripgrep'
   use 'wbthomason/packer.nvim'
   use 'tpope/vim-commentary'
   use 'ellisonleao/gruvbox.nvim'
