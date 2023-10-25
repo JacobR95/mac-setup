@@ -174,6 +174,11 @@ _G.packer_plugins = {
     path = "/Users/jrobinson/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ripgrep = {
+    loaded = true,
+    path = "/Users/jrobinson/.local/share/nvim/site/pack/packer/start/ripgrep",
+    url = "https://github.com/BurntSushi/ripgrep"
+  },
   ["rust-tools.nvim"] = {
     loaded = true,
     path = "/Users/jrobinson/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
