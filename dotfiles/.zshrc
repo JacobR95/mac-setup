@@ -192,3 +192,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/gradle@6/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
