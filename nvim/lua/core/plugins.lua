@@ -1,7 +1,8 @@
 local ensure_packer = function()
-  local fn = vim.fn local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  local fn = vim.fn
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -41,6 +42,12 @@ return require('packer').startup(function(use)
   use 'rafamadriz/friendly-snippets'
   use 'github/copilot.vim'
 
+  -- Database management
+  use({
+    'tpope/vim-dadbod',
+    'kristijanhusak/vim-dadbod-ui'
+  })
+
   use({
     'vadimcn/codelldb',
     'williamboman/mason.nvim',
@@ -51,7 +58,7 @@ return require('packer').startup(function(use)
   use({
     'nvim-telescope/telescope.nvim',
     tag = '0.1.4',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   })
 
   use {
@@ -59,15 +66,15 @@ return require('packer').startup(function(use)
     branch = 'v3.x',
     requires = {
       --- Uncomment these if you want to manage LSP servers from neovim
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
 
       -- LSP Support
-      {'neovim/nvim-lspconfig'},
+      { 'neovim/nvim-lspconfig' },
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'L3MON4D3/LuaSnip'},
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'L3MON4D3/LuaSnip' },
     }
   }
 

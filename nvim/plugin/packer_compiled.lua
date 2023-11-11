@@ -199,6 +199,16 @@ _G.packer_plugins = {
     path = "/Users/jrobinson/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "/Users/jrobinson/.local/share/nvim/site/pack/packer/start/vim-dadbod",
+    url = "https://github.com/tpope/vim-dadbod"
+  },
+  ["vim-dadbod-ui"] = {
+    loaded = true,
+    path = "/Users/jrobinson/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
+    url = "https://github.com/kristijanhusak/vim-dadbod-ui"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/jrobinson/.local/share/nvim/site/pack/packer/start/vim-fugitive",
