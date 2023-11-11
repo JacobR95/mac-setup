@@ -52,6 +52,11 @@ alias rc='cd ~/projects/apriori-react-common && pwd'
 alias setup='cd ~/setup && pwd'
 alias nvim-config='cd ~/setup/nvim && pwd'
 alias homebrew-config='cd ~/setup/homebrew && pwd'
+# EC2
+alias ec2-dev='cd ~/projects/devops-ec2-connect/environments/development && pwd'
+alias ec2-qa='cd ~/projects/devops-ec2-connect/environments/qa-test && pwd'
+alias ec2-prod='cd ~/projects/devops-ec2-connect/environments/production && pwd'
+alias ec2-stage='cd ~/projects/devops-ec2-connect/environments/staging && pwd'
 
 # Docker
 alias dc-ps='docker-compose ps'
@@ -186,3 +191,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH="/opt/homebrew/opt/gradle@6/bin:$PATH"
