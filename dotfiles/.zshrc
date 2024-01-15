@@ -5,6 +5,11 @@ export PATH=$PATH:/Users/jacobrobinson/.local/bin
 export PATH=$PATH:/Users/jacobrobinson/.cargo/bin
 
 export ZSH="$HOME/.oh-my-zsh"
+export DISPLAY=:0
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 alias vi="nvim"
 alias lg="lazygit"
@@ -19,6 +24,8 @@ alias statement="echo '![](https://img.shields.io/badge/statement-green)' | pbco
 alias reload='source ~/.zshrc'
 
 alias brew-dump='rm -rf ~/setup/homebrew/Brewfile && brew bundle dump --file=~/setup/homebrew/Brewfile'
+
+alias gradle-start="gradle bootRun --args='--spring.profiles.active=local'"
 
 #
 # aPriori aliases.
@@ -67,9 +74,9 @@ alias dc-cig='docker-compose --profile cost-insight-generate'
 alias dc-cis='docker-compose --profile cost-insight-source'
 alias dc-cas='docker-compose --profile customer-admin-service'
 alias dc-edc='docker-compose --profile electronics-data-collection'
-alias dc-persist='docker-compose --profile persistance'
+alias dc-persist='docker-compose --profile persistence'
 alias dc-provision='docker-compose --profile provisioning up --build'
-alias dc-up='docker-compose docker-compose --profile persistance up -d && docker-compose --profile core-services up -d && docker-compose --profile cost-insight-design up -d cid-api && docker-compose --profile cost-insight-source up -d cis-api'
+alias dc-up='docker-compose docker-compose --profile persistence up -d && docker-compose --profile core-services up -d && docker-compose --profile cost-insight-design up -d cid-api && docker-compose --profile cost-insight-source up -d cis-api'
 alias rmi-ach-api='docker rmi -f docker.apriori.com/apriori-ach-api:1.1.0-snapshot'
 alias rmi-ach-app='docker rmi -f docker.apriori.com/apriori-ach-app:1.1.0-snapshot'
 alias rmi-ats-api='docker rmi -f docker.apriori.com/apriori-ats-api:2.0.0-snapshot'
@@ -87,6 +94,43 @@ alias rmi-mongo='docker rmi -f mongo:4.2.0'
 alias rmi-mysql='docker rmi -f mysql:5.7'
 alias rmi-postgres='docker rmi -f postgres:12.4'
 alias rmi-redis='docker rmi -f redis:alpine'lias react-common='cd ~/projects/apriori-react-common && pwd'
+
+alias deploy-sds='
+  aws ecs update-service --cluster development-production --service sds --force-new-deployment &&
+  aws ecs update-service --cluster development-production --service sds-http-mig --force-new-deployment &&
+  aws ecs update-service --cluster development-production --service sds-msg-low --force-new-deployment &&
+  aws ecs update-service --cluster development-production --service sds-msg-high --force-new-deployment &&
+  aws ecs update-service --cluster development-production --service sds-search --force-new-deployment &&
+  aws ecs update-service --cluster development-sandbox --service sds --force-new-deployment &&
+  aws ecs update-service --cluster development-sandbox --service sds-http-mig --force-new-deployment &&
+  aws ecs update-service --cluster development-sandbox --service sds-msg-low --force-new-deployment &&
+  aws ecs update-service --cluster development-sandbox --service sds-msg-high --force-new-deployment &&
+  aws ecs update-service --cluster development-sandbox --service sds-search --force-new-deployment
+'
+alias deploy-vds='
+  aws ecs update-service --cluster development-production --service vds --force-new-deployment &&
+  aws ecs update-service --cluster development-sandbox --service vds --force-new-deployment
+'
+alias deploy-gcd='
+  aws ecs update-service --cluster development-production --service gcd --force-new-deployment &&
+  aws ecs update-service --cluster development-sandbox --service gcd --force-new-deployment
+'
+alias deploy-cmp='
+  aws ecs update-service --cluster development-production --service cmp --force-new-deployment &&
+  aws ecs update-service --cluster development-sandbox --service cmp --force-new-deployment
+'
+alias deploy-css='
+  aws ecs update-service --cluster development-production --service css --force-new-deployment &&
+  aws ecs update-service --cluster development-sandbox --service css --force-new-deployment
+'
+alias deploy-cid-api='
+  aws ecs update-service --cluster development-production --service cid-api --force-new-deployment &&
+  aws ecs update-service --cluster development-sandbox --service cid-api --force-new-deployment
+'
+alias deploy-cid-app='
+  aws ecs update-service --cluster development-production --service ci-design --force-new-deployment &&
+  aws ecs update-service --cluster development-sandbox --service ci-design --force-new-deployment
+'
 
 #
 # Oh My Zsh

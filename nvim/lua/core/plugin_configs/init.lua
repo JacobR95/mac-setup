@@ -1,6 +1,7 @@
 require('core.plugin_configs.colorscheme')
 require('core.plugin_configs.copilot')
 require('core.plugin_configs.commentary')
+require('core.plugin_configs.dadbod')
 require('core.plugin_configs.lsp')
 require('core.plugin_configs.lualine')
 require('core.plugin_configs.nvimtree')
