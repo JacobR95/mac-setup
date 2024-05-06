@@ -132,6 +132,8 @@ alias deploy-cid-app='
   aws ecs update-service --cluster development-sandbox --service ci-design --force-new-deployment
 '
 
+alias cppb='c++ -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror -std=c++20'
+
 #
 # Oh My Zsh
 #
