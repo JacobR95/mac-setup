@@ -5,10 +5,10 @@ vim.opt.background = 'dark'
 vim.opt.guifont = 'monospace:h17' -- the font used in graphical neovim applications
 
 -- tabs
-vim.opt.showtabline = 2
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
-vim.opt.tabstop = 2
+vim.opt.showtabline = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
@@ -33,3 +33,23 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  callback = function()
+    vim.opt_local.showtabline = 2
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.softtabstop = 2
+    vim.opt_local.tabstop = 2
+  end
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "cpp",
+  callback = function()
+    vim.opt_local.showtabline = 2
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.softtabstop = 2
+    vim.opt_local.tabstop = 2
+  end
+})
