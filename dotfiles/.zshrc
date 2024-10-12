@@ -3,6 +3,7 @@
 
 export PATH=$PATH:/Users/jacobrobinson/.local/bin
 export PATH=$PATH:/Users/jacobrobinson/.cargo/bin
+export PATH=$PATH:$HOME/go/bin
 
 export ZSH="$HOME/.oh-my-zsh"
 export DISPLAY=:0
@@ -208,6 +209,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
@@ -239,3 +241,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/gradle@6/bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+[[ -s "/Users/jacobrobinson/.gvm/scripts/gvm" ]] && source "/Users/jacobrobinson/.gvm/scripts/gvm"
