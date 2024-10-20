@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-treesitter/nvim-treesitter'
   use 'nvim-tree/nvim-tree.lua'
+  use 'nvim-tree/nvim-web-devicons'
   use 'bluz71/vim-nightfly-colors'
   use 'vim-test/vim-test'
   use 'preservim/vimux'
