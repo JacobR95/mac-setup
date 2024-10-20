@@ -210,6 +210,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
@@ -243,3 +244,9 @@ export PATH="/opt/homebrew/opt/gradle@6/bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 [[ -s "/Users/jacobrobinson/.gvm/scripts/gvm" ]] && source "/Users/jacobrobinson/.gvm/scripts/gvm"
+
+# Eza to replace "ls"
+alias ls="eza --icons=always"
+# Zoxide to replace "cd"
+eval "$(zoxide init zsh)"
+alias cd="z"
