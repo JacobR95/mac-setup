@@ -22,7 +22,7 @@ require('mason-lspconfig').setup({
     'clangd',
     'gopls',
     'rust_analyzer',
-    'tsserver',
+    'ts_ls',
     'jdtls',
     'pylsp',
     'lua_ls',

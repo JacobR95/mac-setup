@@ -41,13 +41,6 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
-  use 'github/copilot.vim'
-
-  -- Database management
-  use({
-    'tpope/vim-dadbod',
-    'kristijanhusak/vim-dadbod-ui'
-  })
 
   use({
     'vadimcn/codelldb',
@@ -58,13 +51,13 @@ return require('packer').startup(function(use)
 
   use({
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.4',
+    tag = '0.1.8',
     requires = { { 'nvim-lua/plenary.nvim' } }
   })
 
   use {
     'VonHeikemen/lsp-zero.nvim',
-    branch = 'v3.x',
+    branch = 'v4.x',
     requires = {
       --- Uncomment these if you want to manage LSP servers from neovim
       { 'williamboman/mason.nvim' },

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/jacobrobinson/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?.lua;/Users/jacobrobinson/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?/init.lua;/Users/jacobrobinson/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?.lua;/Users/jacobrobinson/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/jacobrobinson/.cache/nvim/packer_hererocks/2.1.1696795921/lib/lua/5.1/?.so"
+local package_path_str = "/Users/jacobrobinson/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/Users/jacobrobinson/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/Users/jacobrobinson/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/Users/jacobrobinson/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/jacobrobinson/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -98,11 +98,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jacobrobinson/.local/share/nvim/site/pack/packer/start/codelldb",
     url = "https://github.com/vadimcn/codelldb"
-  },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/Users/jacobrobinson/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -159,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/jacobrobinson/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/jacobrobinson/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   ["oil.nvim"] = {
     loaded = true,
     path = "/Users/jacobrobinson/.local/share/nvim/site/pack/packer/start/oil.nvim",
@@ -198,16 +198,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jacobrobinson/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
-  },
-  ["vim-dadbod"] = {
-    loaded = true,
-    path = "/Users/jacobrobinson/.local/share/nvim/site/pack/packer/start/vim-dadbod",
-    url = "https://github.com/tpope/vim-dadbod"
-  },
-  ["vim-dadbod-ui"] = {
-    loaded = true,
-    path = "/Users/jacobrobinson/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
-    url = "https://github.com/kristijanhusak/vim-dadbod-ui"
   },
   ["vim-fugitive"] = {
     loaded = true,
